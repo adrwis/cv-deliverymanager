@@ -444,6 +444,22 @@ body {
   background: rgba(30, 86, 160, 0.08);
 }
 
+.cv-analyst__skill-group--wide {
+  grid-column: 1 / -1;
+}
+.cv-analyst__skill-group--wide .cv-analyst__skill-bar {
+  display: inline-block;
+  width: calc(50% - 0.6rem);
+  margin-right: 0.5rem;
+  vertical-align: top;
+}
+@media (max-width: 640px) {
+  .cv-analyst__skill-group--wide .cv-analyst__skill-bar {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 .cv-analyst__skill-group h3 {
   font-size: 0.9375rem;
   font-weight: 700;
@@ -1104,6 +1120,36 @@ button:focus-visible {
   .cv-analyst__terminal,
   .cv-analyst__hero-badge {
     display: none !important;
+  }
+
+  /* --- Static binary rain snapshot as page background (set via inline style on body) --- */
+  body.cv-analyst--print-rain {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body.cv-analyst--print-rain .cv-analyst {
+    background: transparent !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body.cv-analyst--print-rain .cv-analyst__container {
+    background: transparent !important;
+  }
+  body.cv-analyst--print-rain .cv-analyst__exp-card,
+  body.cv-analyst--print-rain .cv-analyst__skill-group,
+  body.cv-analyst--print-rain .cv-analyst__edu-item,
+  body.cv-analyst--print-rain .cv-analyst__lang-card {
+    background: rgba(255, 255, 255, 0.92) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body.cv-analyst--print-rain .cv-analyst__skill-group--ai {
+    background: rgba(234, 241, 251, 0.92) !important;
+  }
+  body.cv-analyst--print-rain .cv-analyst__hero {
+    background: rgba(255, 255, 255, 0.85) !important;
+    padding: 0.6cm !important;
+    border-radius: 8px;
   }
 
   /* --- Container: full width for print --- */
