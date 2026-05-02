@@ -448,16 +448,7 @@ body {
   grid-column: 1 / -1;
 }
 .cv-analyst__skill-group--wide .cv-analyst__skill-bar {
-  display: inline-block;
-  width: calc(50% - 0.6rem);
-  margin-right: 0.5rem;
-  vertical-align: top;
-}
-@media (max-width: 640px) {
-  .cv-analyst__skill-group--wide .cv-analyst__skill-bar {
-    width: 100%;
-    margin-right: 0;
-  }
+  width: 100%;
 }
 
 .cv-analyst__skill-group h3 {
